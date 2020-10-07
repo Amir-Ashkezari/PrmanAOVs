@@ -1,0 +1,476 @@
+{
+    "channels": {
+        "Ci": {
+            "type": "color",
+            "source": "Ci",
+            "relativepixelvariance": 1.0
+        },
+        "Oi": {
+            "type": "color",
+            "source": "Oi"
+        },
+        "Nn": {
+            "type": "normal",
+            "source": "Nn"
+        },
+        "Ngn": {
+            "type": "normal",
+            "source": "Ngn"
+        },
+        "Non": {
+            "type": "normal",
+            "source": "Non"
+        },
+        "P": {
+            "type": "point",
+            "source": "P"
+        },
+        "Po": {
+            "type": "point",
+            "source": "Po"
+        },
+        "PRadius": {
+            "type": "float",
+            "source": "PRadius"
+        },
+        "Tn": {
+            "type": "vector",
+            "source": "Tn"
+        },
+        "Vn": {
+            "type": "vector",
+            "source": "Vn"
+        },
+        "VLen": {
+            "type": "float",
+            "source": "VLen"
+        },
+        "cpuTime": {
+            "type": "float",
+            "source": "cpuTime",
+            "filter": "sum",
+            "filterwidth": [1.0, 1.0]
+        },
+        "curvature": {
+            "type": "float",
+            "source": "curvature"
+        },
+        "du": {
+            "type": "float",
+            "source": "du"
+        },
+        "dv": {
+            "type": "float",
+            "source": "dv"
+        },
+        "dw": {
+            "type": "float",
+            "source": "dw"
+        },
+        "dPdu": {
+            "type": "vector",
+            "source": "dPdu"
+        },
+        "dPdv": {
+            "type": "vector",
+            "source": "dPdv"
+        },
+        "dPdw": {
+            "type": "vector",
+            "source": "dPdw"
+        },
+        "dPdtime": {
+            "type": "vector",
+            "source": "dPdtime"
+        },
+        "dPcameradtime": {
+            "type": "vector",
+            "source": "dPcameradtime"
+        },
+        "id": {
+            "type": "int",
+            "source": "id",
+            "filter": "zmin",
+            "filterwidth": [1.0, 1.0]
+        },
+        "incidentRayRadius": {
+            "type": "float",
+            "source": "incidentRayRadius"
+        },
+        "incidentRaySpread": {
+            "type": "float",
+            "source": "incidentRaySpread"
+        },
+        "motionFore": {
+            "type": "vector",
+            "source": "motionFore"
+        },
+        "motionBack": {
+            "type": "vector",
+            "source": "motionBack"
+        },
+        "mpSize": {
+            "type": "float",
+            "source": "mpSize"
+        },
+        "outsideIOR": {
+            "type": "float",
+            "source": "outsideIOR"
+        },
+        "sampleCount": {
+            "type": "float",
+            "source": "sampleCount",
+            "filter": "sum",
+            "filterwidth": [1.0, 1.0]
+        },
+        "time": {
+            "type": "float",
+            "source": "time"
+        },
+        "a": {
+            "type": "float",
+            "source": "a"
+        },
+        "u": {
+            "type": "float",
+            "source": "u"
+        },
+        "v": {
+            "type": "float",
+            "source": "v"
+        },
+        "w": {
+            "type": "float",
+            "source": "w"
+        },
+        "z": {
+            "type": "float",
+            "source": "z"
+        },
+        "albedo": {
+            "type": "color",
+            "source": "lpe:nothruput;noinfinitecheck;noclamp;unoccluded;overwrite;C<.S'passthru'>*((U2L)|O)"
+        },
+        "beauty": {
+            "type": "color",
+            "source": "lpe:C[DS]*[<L.>O]",
+            "relativepixelvariance": 1.0
+        },
+        "emissive": {
+            "type": "color",
+            "source": "lpe:C[<L.>O]"
+        },
+        "directDiffuse": {
+            "type": "color",
+            "source": "lpe:C<RD>[<L.>O]"
+        },
+        "directDiffuseUnoccluded": {
+            "type": "color",
+            "source": "lpe:unoccluded;C<RD>[<L.>O]"
+        },
+        "directSpecular": {
+            "type": "color",
+            "source": "lpe:C<RS>[<L.>O]"
+        },
+        "directSpecularUnoccluded": {
+            "type": "color",
+            "source": "lpe:unoccluded;C<RS>[<L.>O]"
+        },
+        "indirectDiffuse": {
+            "type": "color",
+            "source": "lpe:C<RD>[DS]+[<L.>O]"
+        },
+        "indirectDiffuseUnoccluded": {
+            "type": "color",
+            "source": "lpe:unoccluded;C<RD>[DS]+[<L.>O]"
+        },
+        "indirectSpecular": {
+            "type": "color",
+            "source": "lpe:C<RS>[DS]+[<L.>O]"
+        },
+        "indirectSpecularUnoccluded": {
+            "type": "color",
+            "source": "lpe:unoccluded;C<RS>[DS]+[<L.>O]"
+        },
+        "subsurface": {
+            "type": "color",
+            "source": "lpe:C<TD>[DS]*[<L.>O]"
+        },
+        "directDiffuseLobe": {
+            "type": "color",
+            "source": "lpe:CD2[<L.>O]"
+        },
+        "directSpecularPrimaryLobe": {
+            "type": "color",
+            "source": "lpe:CS2[<L.>O]"
+        },
+        "directSpecularRoughLobe": {
+            "type": "color",
+            "source": "lpe:CS3[<L.>O]"
+        },
+        "directSpecularClearcoatLobe": {
+            "type": "color",
+            "source": "lpe:CS4[<L.>O]"
+        },
+        "directSpecularIridescenceLobe": {
+            "type": "color",
+            "source": "lpe:CS5[<L.>O]"
+        },
+        "directSpecularFuzzLobe": {
+            "type": "color",
+            "source": "lpe:CS6[<L.>O]"
+        },
+        "directSpecularGlassLobe": {
+            "type": "color",
+            "source": "lpe:C<RS8>[<L.>O]"
+        },
+        "indirectDiffuseLobe": {
+            "type": "color",
+            "source": "lpe:CD2[DS]+[<L.>O]"
+        },
+        "indirectSpecularPrimaryLobe": {
+            "type": "color",
+            "source": "lpe:CS2[DS]+[<L.>O]"
+        },
+        "indirectSpecularRoughLobe": {
+            "type": "color",
+            "source": "lpe:CS3[DS]+[<L.>O]"
+        },
+        "indirectSpecularClearcoatLobe": {
+            "type": "color",
+            "source": "lpe:CS4[DS]+[<L.>O]"
+        },
+        "indirectSpecularIridescenceLobe": {
+            "type": "color",
+            "source": "lpe:CS5[DS]+[<L.>O]"
+        },
+        "indirectSpecularFuzzLobe": {
+            "type": "color",
+            "source": "lpe:CS6[DS]+[<L.>O]"
+        },
+        "indirectSpecularGlassLobe": {
+            "type": "color",
+            "source": "lpe:C<RS8>[DS]+[<L.>O]"
+        },
+        "subsurfaceLobe": {
+            "type": "color",
+            "source": "lpe:CD3[DS]*[<L.>O]"
+        },
+        "transmissiveSingleScatterLobe": {
+            "type": "color",
+            "source": "lpe:CS7[DS]*[<L.>O]"
+        },
+        "transmissiveGlassLobe": {
+            "type": "color",
+            "source": "lpe:C<TS8>[DS]*[<L.>O]"
+        },
+        "occluded": {
+            "type": "color",
+            "source": "lpe:holdouts;C[DS]+<L.>"
+        },
+        "shadow": {
+            "type": "color",
+            "source": "lpe:holdouts;unoccluded;C[DS]+<L.>"
+        },
+        "mse": {
+            "type": "color",
+            "source": "Ci",
+            "statistics": "mse"
+        },
+        "albedo_var": {
+            "type": "color",
+            "source": "lpe:nothruput;noinfinitecheck;noclamp;unoccluded;overwrite;C<.S'passthru'>*((U2L)|O)",
+            "statistics": "variance"
+        },
+        "diffuse": {
+            "type": "color",
+            "source": "lpe:C(D[DS]*[LO])|[LO]"
+        },
+        "diffuse_mse": {
+            "type": "color",
+            "source": "lpe:C(D[DS]*[LO])|[LO]",
+            "statistics": "mse"
+        },
+        "specular": {
+            "type": "color",
+            "source": "lpe:CS[DS]*[LO]"
+        },
+        "specular_mse": {
+            "type": "color",
+            "source": "lpe:CS[DS]*[LO]",
+            "statistics": "mse"
+        },
+        "zfiltered": {
+            "type": "float"
+        },
+        "zfiltered_var": {
+            "type": "float",
+            "source": "zfiltered",
+            "statistics": "variance"
+        },
+        "normal": {
+            "type": "normal",
+            "source": "lpe:nothruput;noinfinitecheck;noclamp;unoccluded;overwrite;CU6L"
+        },
+        "normal_var": {
+            "type": "normal",
+            "source": "lpe:nothruput;noinfinitecheck;noclamp;unoccluded;overwrite;CU6L",
+            "statistics": "variance"
+        },
+        "forward": {
+            "type": "vector",
+            "source": "motionFore"
+        },
+        "backward": {
+            "type": "vector",
+            "source": "motionBack"
+        },
+        "MatteID0": {
+            "type": "color",
+            "source": "MatteID0"
+        },
+        "MatteID1": {
+            "type": "color",
+            "source": "MatteID1"
+        },
+        "MatteID2": {
+            "type": "color",
+            "source": "MatteID2"
+        },
+        "MatteID3": {
+            "type": "color",
+            "source": "MatteID3"
+        },
+        "MatteID4": {
+            "type": "color",
+            "source": "MatteID4"
+        },
+        "MatteID5": {
+            "type": "color",
+            "source": "MatteID5"
+        },
+        "MatteID6": {
+            "type": "color",
+            "source": "MatteID6"
+        },
+        "MatteID7": {
+            "type": "color",
+            "source": "MatteID7"
+        },
+        "__Pworld":{
+            "type": "color",
+            "source": "__Pworld"
+        },
+        "__Nworld":{
+            "type": "color",
+            "source": "__Nworld"
+        },
+        "__depth":{
+            "type": "color",
+            "source": "__depth"
+        },
+        "__st":{
+            "type": "color",
+            "source": "__st"
+        },
+        "__Pref":{
+            "type": "color",
+            "source": "__Pref"
+        },
+        "__Nref":{
+            "type": "color",
+            "source": "__Nref"
+        },
+        "__WPref":{
+            "type": "color",
+            "source": "__WPref"
+        },
+        "__WNref":{
+            "type": "color",
+            "source": "__WNref"
+        },
+        "Position":{
+            "type": "color",
+            "source": "lpe:nothruput;noinfinitecheck;noclamp;unoccluded;overwrite;CU3L"
+        },
+        "Color":{
+            "type": "color",
+            "source": "lpe:nothruput;noinfinitecheck;noclamp;unoccluded;overwrite;CU4L"
+        }
+    },
+    "presetTreeItems": [
+        {"Standard" : [
+            "Ci", "Oi", "Nn", "Ngn", "Non", "P", "Po", "PRadius", "Tn",
+            "Vn", "VLen", "curvature", "du", "dv", "dw", "dPdu", "dPdv",
+            "dPdw", "dPdtime", "dPcameradtime", "id", "incidentRayRadius",
+            "incidentRaySpread", "motionFore", "motionBack", "mpSize",
+            "outsideIOR", "time", "a", "u", "v", "w", "z"
+        ]},
+        {"Diagnostic" : [
+            "cpuTime", "sampleCount"
+        ]},
+        {"Lighting" : [
+            "albedo", "beauty", "emissive", "directDiffuse",
+            "directDiffuseUnoccluded", "directSpecular",
+            "directSpecularUnoccluded", "indirectDiffuse",
+            "indirectDiffuseUnoccluded", "indirectSpecular",
+            "indirectSpecularUnoccluded", "subsurface",
+            "directDiffuseLobe", "directSpecularPrimaryLobe",
+            "directSpecularRoughLobe", "directSpecularClearcoatLobe",
+            "directSpecularIridescenceLobe", "directSpecularFuzzLobe",
+            "directSpecularGlassLobe", "indirectDiffuseLobe",
+            "indirectSpecularPrimaryLobe", "indirectSpecularRoughLobe",
+            "indirectSpecularClearcoatLobe", "indirectSpecularIridescenceLobe",
+            "indirectSpecularFuzzLobe", "indirectSpecularGlassLobe",
+            "subsurfaceLobe", "transmissiveSingleScatterLobe",
+            "transmissiveGlassLobe"
+        ]},
+        {"Denoiser" : [
+            "mse", "albedo", "albedo_var", "diffuse", "diffuse_mse",
+            "specular", "specular_mse", "zfiltered", "zfiltered_var",
+            "normal", "normal_var", "forward", "backward"
+        ]},
+        {"Shadow" : [
+            "occluded", "shadow"
+        ]},
+        {"Mattes" : [
+            "MatteID0", "MatteID1", "MatteID2", "MatteID3",
+            "MatteID4", "MatteID5", "MatteID6", "MatteID7"
+        ]},
+        {"Integrator" : [
+            "__Pworld", "__Nworld", "__depth", "__st", "__Pref",
+            "__Nref", "__WPref", "__WNref"
+        ]},
+        {"User Lobes" : [
+            "Position", "Color"
+        ]}
+    ],
+    "displayParams": [
+        "enable", "displayDriver", "parameters.asrgba", "parameters.storage",
+        "parameters.format", "parameters.type", "parameters.compression",
+        "parameters.compressionlevel", "parameters.quantize",
+        "parameters.resolutionunit", "parameters.resolution",
+        "parameters.smode", "parameters.tmode", "denoise", "renderLocation"
+    ],
+    "rodParams": [
+        "", "rendererSettings.displayDriver.value", "rendererSettings.asrgba.value",
+        "rendererSettings.storage.value", "rendererSettings.format.value",
+        "rendererSettings.type.value", "rendererSettings.compression.value",
+        "rendererSettings.compressionlevel.value",
+        "rendererSettings.quantize.value",
+        "rendererSettings.resolutionunit.value",
+        "rendererSettings.resolution.value",
+        "rendererSettings.smode.value", "rendererSettings.tmode.value",
+        "rendererSettings.denoise", "locationSettings.renderLocation.value"
+    ],
+    "channelParams": [
+        "enable", "type", "source", "advanced.filter", "advanced.filterwidth",
+        "advanced.statistics", "advanced.relativepixelvariance",
+        "advanced.remap"
+    ],
+    "pocdParams": [
+        "", "type", "params.source.value", "params.filter.value",
+        "params.filterwidth.value", "params.statistics.value",
+        "params.relativepixelvariance.value", "params.remap.value"
+    ]
+}

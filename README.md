@@ -1,6 +1,8 @@
 # PrmanAOVs - RenderMan for Katana
 
-A tool for speeding up renderman aov creation inside katana.
+A katana plugin for speeding up renderman aov creation.
+
+[A quick intro to PrmanAOVs](https://vimeo.com/465821968)
 
 ## Installation
 
