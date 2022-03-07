@@ -39,8 +39,9 @@ def jsonLoad(file_handle):
 
 def _byteify(data, ignore_dicts=False):
     # if this is a unicode string, return its string representation
-    if isinstance(data, unicode):
-        return data.encode('utf-8')
+    # if isinstance(data, unicode):
+    #     return data.encode('utf-8')
+
     # if this is a list of values, return list of byteified values
     if isinstance(data, list):
         return [_byteify(item, ignore_dicts=True) for item in data]
@@ -50,7 +51,7 @@ def _byteify(data, ignore_dicts=False):
         return dict((
             _byteify(key, ignore_dicts=True),
             _byteify(value, ignore_dicts=True)
-        ) for key, value in data.iteritems())
+        ) for key, value in data.items())
     # if it's anything else, return it in its original form
     return data
 

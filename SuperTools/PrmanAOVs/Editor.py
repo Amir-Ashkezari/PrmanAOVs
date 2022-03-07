@@ -1,7 +1,7 @@
 from Katana import QtCore, QtGui, UI4, Utils, QT4Widgets
 from Katana import FormMaster, QtWidgets
 from Katana import NodegraphAPI
-import ScriptActions as SA
+from . import ScriptActions as SA
 import re
 
 
@@ -41,7 +41,7 @@ class TreeWidget(QT4Widgets.SortableTreeWidget):
             QtCore.Qt.ItemIsEditable
 
         for itemPair in kwargs.get('itemPairList'):
-            displayName = str(itemPair.keys()[0])
+            displayName = str(list(itemPair.keys())[0])
             self.__displayItem = treeWidgetItem(kwargs.get('parentItem'))
             self.__displayItem.setText(0, displayName)
             self.__displayItem.setData(
@@ -51,8 +51,8 @@ class TreeWidget(QT4Widgets.SortableTreeWidget):
             else:
                 self.__displayItem.setFlags(QtCore.Qt.ItemIsEnabled)
             self.__displayItem.setExpanded(True)
-            if itemPair.values()[0]:
-                for itemList in itemPair.values():
+            if list(itemPair.values())[0]:
+                for itemList in list(itemPair.values()):
                     for item in itemList:
                         self.__channelItem = treeWidgetItem(
                             self.__displayItem)

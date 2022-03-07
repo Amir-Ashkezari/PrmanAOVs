@@ -1,5 +1,5 @@
 from Katana import NodegraphAPI, Utils
-import ScriptActions as SA
+from . import ScriptActions as SA
 
 
 class PrmanAOVsNode(NodegraphAPI.SuperTool):
@@ -136,7 +136,7 @@ class PrmanAOVsNode(NodegraphAPI.SuperTool):
                 'statistics': 'string', 'relativepixelvariance': 'float',
                 'remap': 'float'
             }
-            for paramName, paramValue in kwargs.iteritems():
+            for paramName, paramValue in kwargs.items():
                 if paramName == 'type':
                     pocdNode.getParameter(paramName).setValue(paramValue, 0)
                     continue
